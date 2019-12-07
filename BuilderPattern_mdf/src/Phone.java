@@ -103,8 +103,7 @@ public class Phone {
 
     @Override
     public String toString() {
-        return "\t\t手机配置信息：\n"+
-                "处理器：\t"+getCpu()+"\n"+
+        return "处理器：\t"+getCpu()+"\n"+
                 "内存：\t"+getRam()+"\n"+
                 "电池：\t"+getBattery()+"\n"+
                 "屏幕：\t"+getScreen()+"\n"+
