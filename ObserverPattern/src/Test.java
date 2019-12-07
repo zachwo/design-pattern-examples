@@ -12,6 +12,29 @@
  */
 public class Test {
     public static void main(String[] args) {
+        MessageSource messageSource = new MessageSource();
+        Observer worker = new Worker();
+        Observer qualityManager = new QualityManager();
+
+        messageSource.add(worker);
+        messageSource.add(qualityManager);
+        System.out.println();
+
+        messageSource.change("停电了");
+        worker.action();
+        qualityManager.action();
+        System.out.println();
+
+        messageSource.change("供电恢复");
+        worker.action();
+        qualityManager.action();
+        System.out.println();
+
+        //质管员移出观察者名单后，信息不再更新
+        messageSource.remove(qualityManager);
+        messageSource.change("停水了");
+        worker.action();
+        qualityManager.action();
 
     }
 }
