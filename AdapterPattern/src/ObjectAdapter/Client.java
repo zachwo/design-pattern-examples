@@ -18,5 +18,6 @@ public class Client {
         Adapter adapter = new Adapter(new Micro());
         adapter.io();
         adapter.fastCharge();
+        adapter.normalCharge();
     }
 }
