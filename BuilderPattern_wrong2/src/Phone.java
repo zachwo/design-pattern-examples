@@ -3,6 +3,7 @@ public class Phone {
     private String ram;
     private String battery;
     private String screen;
+
     private String camera;
     private String gps;
     private String fingerPrintSensor;
