@@ -1,5 +1,6 @@
 /**
  * 建造者模式：
+ * 原理参考：https://www.runoob.com/design-pattern/design-pattern-tutorial.html
  * 原理参考：https://www.cnblogs.com/java-my-life/archive/2012/04/07/2433939.html
  *
  * 手机由，CPU，内存，电池，屏幕4个必须部件，以及摄像头，GPS，指纹识别，NFC，4个可选部件组成。

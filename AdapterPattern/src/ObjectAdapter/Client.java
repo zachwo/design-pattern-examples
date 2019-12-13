@@ -2,6 +2,7 @@ package ObjectAdapter;
 
 /**
  * 对象适配器模式
+ * 原理参考：https://www.runoob.com/design-pattern/design-pattern-tutorial.html
  * 原理参考：https://www.cnblogs.com/java-my-life/archive/2012/04/13/2442795.html
  *
  * 手机默认使用Type-C USB接口，支持读取以及快速充电。但仍需要支持Micro USB接口，其支持读取以及普通充电。

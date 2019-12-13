@@ -1,5 +1,6 @@
 /**
  * #### 工厂模式/单例模式
+ * 原理参考：https://www.runoob.com/design-pattern/design-pattern-tutorial.html
  * 原理参考：https://www.cnblogs.com/java-my-life/archive/2012/03/28/2418836.html
  * 原理参考：https://www.cnblogs.com/java-my-life/archive/2012/03/31/2425631.html
  *
