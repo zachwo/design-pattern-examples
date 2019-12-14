@@ -1,7 +1,7 @@
 /**
  * 观察者模式
  * 原理参考：https://www.runoob.com/design-pattern/design-pattern-tutorial.html
- * 原理参考：https://www.cnblogs.com/java-my-life/archive/2012/05/16/2502279.html
+ * 原理参考：https://www.runoob.com/design-pattern/observer-pattern.html
  *
  *当生产线生产出问题部件时，发送消息通知所有关注部件质量的人，例如质管员，工人等。
  *
@@ -11,11 +11,29 @@
  * 当部件生产出现问题(调用一个方法模拟即可)，通知部件质量消息源错误信息，
  * 消息源通知注册在此消息源上的全部观察者事件的发生，各观察者产生不同的消息消费行为，例如质管员记录，工人核查等(均为模拟的方法)。
  *
- * 一个消息源工厂管理多个静态消息源,一个消息源
+ * 一个消息源工厂管理多个静态消息源
  *
  */
 public class Test {
     public static void main(String[] args) {
+        Factory message = new Factory();
 
+        Observer manager = new ManagerObserver(message);
+        Observer worker = new WorkerObserver(message);
+
+        System.out.println("错误消息源：404");
+        message.setState(404);
+        System.out.println();
+
+        //移除质管员
+        System.out.println("错误消息源：501");
+        message.remove(manager);
+        message.setState(501);
+        System.out.println();
+
+        //加入质管员
+        System.out.println("错误消息源：101");
+        message.attach(manager);
+        message.setState(501);
     }
 }
